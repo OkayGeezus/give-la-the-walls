@@ -55,6 +55,11 @@ export const images = {
       objectPosition: "center 40%",
     },
   ],
+  /**
+   * Selected Work carousel — append items freely (any length).
+   * To add a piece: put the file in `src/assets/images/`, import it above,
+   * then push `{ src, alt, caption?, objectPosition? }` onto this array.
+   */
   work: [
     {
       src: work01,

@@ -1,6 +1,7 @@
 import { Nav } from "./components/Nav";
 import { Reveal } from "./components/Reveal";
 import { SiteImage } from "./components/SiteImage";
+import { WorkCarousel } from "./components/WorkCarousel";
 import {
   classroomPath,
   images,
@@ -386,18 +387,7 @@ export default function App() {
               <h2 id="work-title" className="display display--xl">
                 SELECTED WORK.
               </h2>
-              <div className="work-grid work-grid--select">
-                {images.work.map((item, index) => (
-                  <SiteImage
-                    key={`work-${index}`}
-                    src={item.src}
-                    alt={item.alt}
-                    caption={item.caption}
-                    objectPosition={item.objectPosition}
-                    className="figure--square"
-                  />
-                ))}
-              </div>
+              <WorkCarousel items={images.work} />
             </Reveal>
           </div>
         </section>

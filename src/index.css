@@ -424,12 +424,6 @@ button {
     height: clamp(240px, 55vw, 300px);
     max-height: 38vh;
   }
-
-  .work-grid .figure .figure__media {
-    aspect-ratio: 1;
-    height: auto;
-    max-height: none;
-  }
 }
 
 @media (min-width: 601px) and (max-width: 899px) {
@@ -702,7 +696,7 @@ button {
   }
 }
 
-/* Selected Work layout lives with .work-grid below */
+/* Selected Work carousel styles live with .work-carousel below */
 
 .contact-block--simple {
   margin-top: 3rem;
@@ -970,33 +964,108 @@ button {
   font-variant-numeric: tabular-nums;
 }
 
-/* ——— Work gallery ——— */
+/* ——— Work carousel ——— */
 
-.work-grid {
+.work-carousel {
   margin-top: 2.5rem;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr;
+  width: 100%;
+  max-width: 100%;
 }
 
-.work-grid .figure {
-  grid-column: auto;
+.work-carousel__viewport {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  touch-action: pan-y;
+  cursor: grab;
 }
 
-.work-grid .figure .figure__media {
+.work-carousel__viewport:active {
+  cursor: grabbing;
+}
+
+.work-carousel__track {
+  display: flex;
+  align-items: flex-start;
+  will-change: transform;
+  transition: transform 0.55s var(--ease);
+}
+
+.work-carousel__track.is-dragging {
+  transition: none;
+}
+
+.work-carousel__slide {
+  min-width: 0;
+  user-select: none;
+}
+
+.work-carousel__slide .figure {
+  width: 100%;
+}
+
+.work-carousel__slide .figure__media {
   aspect-ratio: 1;
-  max-height: min(70vw, 560px);
+  max-height: none;
 }
 
-@media (min-width: 720px) {
-  .work-grid.work-grid--select {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.1rem;
-  }
+.work-carousel__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
 
-  .work-grid .figure .figure__media {
+.work-carousel__nav {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.35rem 0.75rem;
+  font-size: 1.15rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  border: 1px solid rgba(17, 17, 17, 0.18);
+  background: transparent;
+  transition: opacity 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.work-carousel__nav:hover {
+  opacity: 0.65;
+  border-color: rgba(17, 17, 17, 0.4);
+}
+
+.work-carousel__dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.work-carousel__dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(17, 17, 17, 0.35);
+  background: transparent;
+  transition: background 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.work-carousel__dot.is-active {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+@media (max-width: 600px) {
+  .work-carousel__slide .figure__media {
     aspect-ratio: 1;
-    max-height: min(42vw, 520px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-carousel__track {
+    transition: none;
   }
 }
 
