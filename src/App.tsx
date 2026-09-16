@@ -237,17 +237,15 @@ export default function App() {
               </h3>
             </Reveal>
 
-            <Reveal className="walls walls--duo" delay={1}>
-              <SiteImage
-                src={images.wall01.src}
-                alt={images.wall01.alt}
-                className="figure--portrait"
-              />
-              <SiteImage
-                src={images.wall03.src}
-                alt={images.wall03.alt}
-                className="figure--wide"
-              />
+            <Reveal className="walls walls--born-here" delay={1}>
+              {images.bornHereGallery.map((item, index) => (
+                <SiteImage
+                  key={`born-here-${index}`}
+                  src={item.src}
+                  alt={item.alt}
+                  className="figure--wide"
+                />
+              ))}
             </Reveal>
           </div>
         </section>
@@ -389,13 +387,11 @@ export default function App() {
               <div className="work-grid work-grid--select">
                 {images.work.map((item, index) => (
                   <SiteImage
-                    key={item.src}
+                    key={`work-${index}`}
                     src={item.src}
                     alt={item.alt}
                     caption={item.caption}
-                    className={
-                      index % 2 === 1 ? "figure--portrait" : "figure--wide"
-                    }
+                    className="figure--wide"
                   />
                 ))}
               </div>

@@ -611,47 +611,37 @@ button {
   border-top: 1px solid rgba(245, 243, 238, 0.12);
 }
 
-.walls--duo {
+.walls--born-here {
   margin-top: 3rem;
 }
 
+/* Mobile: single column; desktop: 1×3 row — override default .walls layout */
+.walls.walls--born-here {
+  grid-template-columns: 1fr;
+  grid-template-rows: none;
+}
+
+.walls.walls--born-here .figure:first-child {
+  grid-row: auto;
+  grid-column: auto;
+  min-height: 0;
+  height: auto;
+}
+
 @media (min-width: 800px) {
-  .walls--duo {
-    grid-template-columns: 0.9fr 1.1fr;
-    grid-template-rows: auto;
+  .walls.walls--born-here {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
   }
 
-  .walls--duo .figure:first-child {
-    grid-row: auto;
-    min-height: 420px;
+  .walls.walls--born-here .figure {
+    aspect-ratio: 4 / 3;
+    min-height: 0;
+    height: auto;
   }
 }
 
-@media (min-width: 720px) {
-  .work-grid--select {
-    grid-template-columns: repeat(12, 1fr);
-  }
-
-  .work-grid--select .figure:nth-child(1) {
-    grid-column: span 7;
-    aspect-ratio: 16 / 11;
-  }
-
-  .work-grid--select .figure:nth-child(2) {
-    grid-column: span 5;
-    aspect-ratio: 4 / 5;
-  }
-
-  .work-grid--select .figure:nth-child(3) {
-    grid-column: span 5;
-    aspect-ratio: 4 / 5;
-  }
-
-  .work-grid--select .figure:nth-child(4) {
-    grid-column: span 7;
-    aspect-ratio: 16 / 11;
-  }
-}
+/* Selected Work layout lives with .work-grid below */
 
 .contact-block--simple {
   margin-top: 3rem;
@@ -900,42 +890,18 @@ button {
   margin-top: 2.5rem;
   display: grid;
   gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.work-grid .figure {
+  grid-column: auto;
+  aspect-ratio: 4 / 3;
 }
 
 @media (min-width: 720px) {
-  .work-grid {
-    grid-template-columns: repeat(12, 1fr);
+  .work-grid.work-grid--select {
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.1rem;
-  }
-
-  .work-grid .figure:nth-child(1) {
-    grid-column: span 7;
-    aspect-ratio: 16 / 11;
-  }
-
-  .work-grid .figure:nth-child(2) {
-    grid-column: span 5;
-    aspect-ratio: 4 / 5;
-  }
-
-  .work-grid .figure:nth-child(3) {
-    grid-column: span 4;
-    aspect-ratio: 4 / 5;
-  }
-
-  .work-grid .figure:nth-child(4) {
-    grid-column: span 8;
-    aspect-ratio: 16 / 10;
-  }
-
-  .work-grid .figure:nth-child(5) {
-    grid-column: span 6;
-    aspect-ratio: 16 / 12;
-  }
-
-  .work-grid .figure:nth-child(6) {
-    grid-column: span 6;
-    aspect-ratio: 4 / 5;
   }
 }
 

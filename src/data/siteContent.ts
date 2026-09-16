@@ -1,15 +1,24 @@
 /** Editable site content — update phone, email, Instagram, captions here. */
 
+import dodgersMuralHero from "../assets/images/dodgers-mural-hero.jpg";
+import bornHere01 from "../assets/images/born-here-01.jpg";
+import bornHere02 from "../assets/images/born-here-02.jpg";
+import bornHere03 from "../assets/images/born-here-03.jpg";
+import work01 from "../assets/images/work-01.jpg";
+import work02 from "../assets/images/work-02.jpg";
+import work03 from "../assets/images/work-03.jpg";
+import work04 from "../assets/images/work-04.jpg";
+
 export const site = {
   name: "Guillermo Palacio",
   titleLines: ["Artist", "Designer", "Creative Director"] as const,
   location: "Los Angeles, California",
-  phone: "PHONE_NUMBER_HERE",
-  phoneHref: "tel:PHONE_NUMBER_HERE",
-  email: "EMAIL_ADDRESS_HERE",
-  emailHref: "mailto:EMAIL_ADDRESS_HERE",
-  instagram: "INSTAGRAM_URL_HERE",
-  instagramLabel: "@INSTAGRAM_HANDLE_HERE",
+  phone: "(310) 628-6787",
+  phoneHref: "tel:+13106286787",
+  email: "gpalaciocorp@gmail.com",
+  emailHref: "mailto:gpalaciocorp@gmail.com",
+  instagram: "https://instagram.com/thevsnry",
+  instagramLabel: "@thevsnry",
   year: 2026,
 } as const;
 
@@ -21,38 +30,45 @@ export type SiteImage = {
 
 export const images = {
   dodgersMural: {
-    src: "/images/dodgers-mural-hero.jpg",
-    alt: "Venice Beach mural celebrating the Los Angeles Dodgers World Series championship",
+    src: dodgersMuralHero,
+    alt: "Venice Beach mural celebrating the Los Angeles Dodgers World Series championship, featuring Shohei Ohtani",
     caption: "Venice Beach · Dodgers mural",
   },
-  wall01: {
-    src: "/images/wall-01.jpg",
-    alt: "Los Angeles wall surface caught in a graffiti and paint-over cycle",
-  },
-  wall03: {
-    src: "/images/wall-03.jpg",
-    alt: "Urban wall in Los Angeles awaiting commissioned artwork",
-  },
+  /** After “ARTWORK BORN HERE. TALENT SOURCED HERE.” — single column */
+  bornHereGallery: [
+    {
+      src: bornHere01,
+      alt: "Crew on a lift painting over a mural under a Los Angeles freeway overpass",
+    },
+    {
+      src: bornHere02,
+      alt: "Frank Romero freeway mural with cars, hearts, and palm trees near Hollywood 101",
+    },
+    {
+      src: bornHere03,
+      alt: "Los Angeles freeway mural of Jupiter and classical columns beside Harbor Freeway traffic",
+    },
+  ],
   work: [
     {
-      src: "/images/work-01.jpg",
-      alt: "Recent mural work by Guillermo Palacio",
+      src: work01,
+      alt: "Indoor landscape mural of fruit orchards, palm trees, and a house in the mountains",
       caption: "Mural",
     },
     {
-      src: "/images/work-02.jpg",
-      alt: "Public-facing artwork",
-      caption: "Public art",
+      src: work02,
+      alt: "Colorful graffiti mural on a corrugated metal fence under a cloudy Los Angeles sky",
+      caption: "Street art",
     },
     {
-      src: "/images/work-03.jpg",
-      alt: "Illustration or design work",
+      src: work03,
+      alt: "Artists spray-painting a Lakers portrait mural on a yellow truck",
+      caption: "On site",
+    },
+    {
+      src: work04,
+      alt: "Illustration of a bird beside yellow and orange flowers",
       caption: "Illustration",
-    },
-    {
-      src: "/images/work-04.jpg",
-      alt: "Creative direction project",
-      caption: "Direction",
     },
   ] satisfies SiteImage[],
   og: {

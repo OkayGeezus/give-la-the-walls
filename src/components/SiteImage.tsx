@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type SiteImageProps = {
   src: string;
@@ -16,12 +16,17 @@ export function SiteImage({
   priority = false,
 }: SiteImageProps) {
   const [failed, setFailed] = useState(false);
-  const filename = src.split("/").pop() ?? src;
+  const filename = src.split("/").pop()?.split("?")[0] ?? src;
+
+  useEffect(() => {
+    setFailed(false);
+  }, [src]);
 
   return (
     <figure className={`figure ${className}`.trim()}>
       {!failed ? (
         <img
+          key={src}
           src={src}
           alt={alt}
           loading={priority ? "eager" : "lazy"}
@@ -29,12 +34,17 @@ export function SiteImage({
           onError={() => setFailed(true)}
         />
       ) : (
-        <div className="figure__placeholder" aria-label={`Missing image: ${filename}`}>
+        <div
+          className="figure__placeholder"
+          aria-label={`Missing image: ${filename}`}
+        >
           <span>ADD IMAGE</span>
           <code>{filename}</code>
         </div>
       )}
-      {caption ? <figcaption className="figure__caption">{caption}</figcaption> : null}
+      {caption ? (
+        <figcaption className="figure__caption">{caption}</figcaption>
+      ) : null}
     </figure>
   );
 }
