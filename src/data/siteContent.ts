@@ -19,6 +19,16 @@ import work12 from "../assets/images/work-12.jpg";
 import work13 from "../assets/images/work-13.jpg";
 import work14 from "../assets/images/work-14.jpg";
 import work15 from "../assets/images/work-15.jpg";
+import work16 from "../assets/images/work-16.jpg";
+import work17 from "../assets/images/work-17.jpg";
+import work18 from "../assets/images/work-18.jpg";
+import work19 from "../assets/images/work-19.jpg";
+import work20 from "../assets/images/work-20.jpg";
+import work21 from "../assets/images/work-21.jpg";
+import work22 from "../assets/images/work-22.jpg";
+import work23 from "../assets/images/work-23.jpg";
+import work24 from "../assets/images/work-24.jpg";
+import work25 from "../assets/images/work-25.jpg";
 
 export const site = {
   name: "Guillermo Palacio",
@@ -161,6 +171,66 @@ export const images = {
       alt: "Interior corner mural with tiki mask, tropical florals, and blue lettering",
       caption: "Interior mural",
       objectPosition: "center 40%",
+    },
+    {
+      src: work16,
+      alt: "Los Angeles Dodgers mural with Freddie Freeman portrait and blue wildstyle lettering",
+      caption: "Dodgers mural",
+      objectPosition: "center 40%",
+    },
+    {
+      src: work17,
+      alt: "Clayton Kershaw mural with lightning effects and Los Angeles skyline",
+      caption: "Dodgers mural",
+      objectPosition: "center 35%",
+    },
+    {
+      src: work18,
+      alt: "Shohei Ohtani Dodgers mural painted on a metal door with LA logo",
+      caption: "Dodgers mural",
+      objectPosition: "center 30%",
+    },
+    {
+      src: work19,
+      alt: "Wide tropical jungle mural with waterfall, macaws, monkeys, and butterflies",
+      caption: "Mural",
+      objectPosition: "center 45%",
+    },
+    {
+      src: work20,
+      alt: "Roaring gorilla graffiti artwork with fire highlights and raised fist",
+      caption: "Character art",
+      objectPosition: "center 40%",
+    },
+    {
+      src: work21,
+      alt: "Black and white portrait mural of a man in a suit with a white rose boutonniere",
+      caption: "Portrait mural",
+      objectPosition: "center 35%",
+    },
+    {
+      src: work22,
+      alt: "Bathroom mural of a grinning shark wearing red sunglasses",
+      caption: "Interior mural",
+      objectPosition: "center 40%",
+    },
+    {
+      src: work23,
+      alt: "Digital Elite lettering design with straight razor illustration on a tablet",
+      caption: "Lettering",
+      objectPosition: "center 40%",
+    },
+    {
+      src: work24,
+      alt: "Wide Dodgers championship mural with player portrait and graffiti lettering",
+      caption: "Dodgers mural",
+      objectPosition: "center 42%",
+    },
+    {
+      src: work25,
+      alt: "Portrait mural of Clayton Kershaw celebrating in a Dodgers uniform",
+      caption: "Dodgers mural",
+      objectPosition: "center 32%",
     },
   ] satisfies SiteImage[],
   og: {
