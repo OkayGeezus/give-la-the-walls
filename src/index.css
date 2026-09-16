@@ -697,14 +697,8 @@ button {
 @media (min-width: 800px) {
   .walls.walls--born-here {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: none;
     align-items: stretch;
-  }
-
-  /* Identical heights despite mixed source aspect ratios */
-  .walls.walls--born-here .figure .figure__media {
-    aspect-ratio: auto;
-    height: clamp(340px, 28vw, 420px);
-    max-height: none;
   }
 }
 
@@ -772,6 +766,24 @@ button {
     min-height: clamp(360px, 40vw, 520px);
     max-height: none;
     aspect-ratio: auto;
+  }
+
+  /*
+   * Born-here trio: must come after the generic .walls first-child rules
+   * so the tall portrait source cannot stretch only column 1.
+   */
+  .walls.walls--born-here .figure:first-child {
+    grid-row: auto;
+    height: auto;
+    min-height: 0;
+  }
+
+  .walls.walls--born-here .figure .figure__media,
+  .walls.walls--born-here .figure:first-child .figure__media {
+    aspect-ratio: unset;
+    height: clamp(340px, 28vw, 420px);
+    min-height: 0;
+    max-height: none;
   }
 }
 
