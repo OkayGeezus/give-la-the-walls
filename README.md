@@ -22,3 +22,5 @@ npm run preview
 Edit `src/data/siteContent.ts` for name, contact, Instagram, image alt text, and captions.
 
 Drop photography into `public/images/` — see `public/images/README.md`. Missing images show placeholders automatically.
+
+Detailed proposal language removed from the public site is preserved in `content/full-proposal.md` (and git tag `full-proposal-v1`).

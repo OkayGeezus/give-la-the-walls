@@ -2,16 +2,12 @@ import { Nav } from "./components/Nav";
 import { Reveal } from "./components/Reveal";
 import { SiteImage } from "./components/SiteImage";
 import {
-  businessSkills,
-  careerLadder,
-  cityThemes,
   classroomPath,
-  craftSkills,
   images,
-  pilotSteps,
+  pilotFlow,
   pipeline,
-  redirectSteps,
   site,
+  youthPath,
 } from "./data/siteContent";
 
 export default function App() {
@@ -24,7 +20,7 @@ export default function App() {
       <Nav />
 
       <main id="main">
-        {/* 09 Hero */}
+        {/* Hero */}
         <header className="hero shell">
           <Reveal>
             <p className="eyebrow">A Public Art Vision for Los Angeles</p>
@@ -46,7 +42,7 @@ export default function App() {
           </Reveal>
         </header>
 
-        {/* 10 Proof / Dodgers mural */}
+        {/* Proof / Dodgers mural */}
         <section className="section section--tight" aria-labelledby="proof-title">
           <div className="shell">
             <Reveal>
@@ -77,24 +73,17 @@ export default function App() {
               <p className="prose">
                 <strong>Public art can do more than beautify a wall.</strong>
               </p>
-              <div className="pull" aria-hidden="false">
-                <span>It can create identity.</span>
-                <span>It can create pride.</span>
-                <span>
-                  And, when we invest in the people creating it, it can create
-                  opportunity.
-                </span>
+              <div className="pull">
+                <span>IT CAN CREATE IDENTITY.</span>
+                <span>IT CAN CREATE PRIDE.</span>
+                <span>IT CAN CREATE OPPORTUNITY.</span>
               </div>
             </Reveal>
           </div>
         </section>
 
-        {/* 11 Vision */}
-        <section
-          id="vision"
-          className="section"
-          aria-labelledby="vision-title"
-        >
+        {/* Vision */}
+        <section id="vision" className="section" aria-labelledby="vision-title">
           <div className="shell">
             <Reveal>
               <p className="eyebrow">The Vision</p>
@@ -106,17 +95,13 @@ export default function App() {
                 BEAUTIFY LOS ANGELES.
               </h2>
               <p className="prose">
-                Los Angeles has extraordinary artistic talent.
+                Los Angeles already has extraordinary artistic talent.
               </p>
               <p className="prose">
-                Especially within communities where graffiti, street art,
-                lettering, illustration, music, fashion and design are already
-                deeply embedded in the culture.
-              </p>
-              <p className="prose">
-                The opportunity is to create more pathways that turn that talent
-                into professional experience, economic opportunity and public
-                art.
+                The opportunity is to create stronger pathways that turn that
+                talent into professional experience, economic opportunity and
+                public art — while transforming overlooked and repeatedly
+                painted-over walls into cultural landmarks.
               </p>
             </Reveal>
 
@@ -133,7 +118,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* 12 From Graffiti to Opportunity */}
+        {/* 01 Develop the artists */}
         <section id="youth" className="section" aria-labelledby="youth-title">
           <div className="shell">
             <Reveal>
@@ -142,9 +127,9 @@ export default function App() {
               </p>
               <p className="eyebrow">Youth Artist Development</p>
               <h2 id="youth-title" className="display display--xl">
-                FROM GRAFFITI
+                DEVELOP THE TALENT.
                 <br />
-                TO OPPORTUNITY.
+                CREATE THE OPPORTUNITY.
               </h2>
               <p className="secondary-line">
                 DON&apos;T SUPPRESS THE TALENT.
@@ -152,145 +137,48 @@ export default function App() {
                 DEVELOP IT.
               </p>
               <p className="prose">
-                Some of the young people writing on Los Angeles walls already
-                possess the beginnings of valuable creative skills:
+                Some young Angelenos already possess the beginnings of valuable
+                creative skills — lettering, composition, color, illustration,
+                design and style.
               </p>
               <p className="prose">
-                Lettering. Composition. Color. Illustration. Style. Fearlessness.
-              </p>
-              <p className="prose">
-                The challenge is that many young artists may never be shown how
-                those abilities can become a legitimate profession.
-              </p>
-              <p className="prose">
-                <strong>Let&apos;s show them.</strong>
-              </p>
-              <p className="prose">
-                I propose a city-supported mural and street-art development
-                program connecting young Angelenos with professional muralists,
-                graffiti artists, designers, illustrators and other creative
+                I propose exploring a city-supported artist-development program
+                connecting young people with professional muralists, street
+                artists, designers, illustrators and other creative
                 professionals.
               </p>
               <p className="prose">
-                The goal isn&apos;t simply to teach young people how to paint
-                murals.
-              </p>
-              <h3 className="display display--lg" style={{ marginTop: "2.75rem" }}>
-                TEACH THEM HOW TO
-                <br />
-                BECOME PROFESSIONAL ARTISTS.
-              </h3>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* 13 Craft + Business */}
-        <section className="section section--tight" aria-labelledby="craft-title">
-          <div className="shell">
-            <h2 id="craft-title" className="visually-hidden">
-              Craft and business
-            </h2>
-            <Reveal className="split">
-              <div>
-                <h3>Learn the Craft</h3>
-                <ol className="skill-list">
-                  {craftSkills.map((skill, i) => (
-                    <li key={skill}>
-                      <span>{String(i + 1).padStart(2, "0")}</span>
-                      {skill}
-                    </li>
-                  ))}
-                </ol>
-              </div>
-              <div>
-                <h3>Learn the Business</h3>
-                <ol className="skill-list">
-                  {businessSkills.map((skill, i) => (
-                    <li key={skill}>
-                      <span>{String(i + 1).padStart(2, "0")}</span>
-                      {skill}
-                    </li>
-                  ))}
-                </ol>
-              </div>
-            </Reveal>
-
-            <Reveal delay={1}>
-              <div className="ladder" aria-label="Development path">
-                {careerLadder.map((step) => (
-                  <span key={step}>{step}</span>
-                ))}
-              </div>
-              <p className="prose">
-                Pair participants with established Los Angeles muralists, street
-                artists and creative professionals.
-              </p>
-              <p className="prose">
-                Young artists can begin as students. Then become apprentices.
-                Then assistants. Then working artists. And eventually mentors to
-                the generation behind them.
-              </p>
-              <h3 className="display display--lg" style={{ marginTop: "2.5rem" }}>
-                CREATE THE CYCLE
-                <br />
-                WE WANT TO SEE.
-              </h3>
-              <div className="duo">
-                <SiteImage
-                  src={images.youth01.src}
-                  alt={images.youth01.alt}
-                  className="figure--portrait"
-                />
-                <SiteImage
-                  src={images.youth02.src}
-                  alt={images.youth02.alt}
-                  className="figure--square"
-                />
-              </div>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* 14 Redirect the Energy */}
-        <section className="section section--ink" aria-labelledby="redirect-title">
-          <div className="shell">
-            <Reveal>
-              <h2 id="redirect-title" className="display display--xl">
-                REDIRECT
-                <br />
-                THE ENERGY.
-              </h2>
-              <p className="prose">
-                Los Angeles spends resources responding to graffiti and vandalism
-                after it happens.
-              </p>
-              <p className="prose">
-                This initiative explores another part of the solution:
+                The goal is bigger than teaching someone how to paint a mural.
               </p>
               <p className="prose">
                 <strong>
-                  Invest in artistic talent before its only canvas is an
-                  unauthorized wall.
+                  It is about showing them how creative ability can become a
+                  profession.
                 </strong>
               </p>
-              <p className="prose">
-                Not every participant will become a professional artist. Not
-                every mural will eliminate vandalism.
-              </p>
-              <p className="prose">
-                But we can create more legitimate places, mentors and economic
-                pathways for young people who already have the desire to create.
-              </p>
-              <div className="ink-steps">
-                {redirectSteps.map((line) => (
-                  <p key={line}>{line}</p>
+
+              <div className="flow" aria-label="Development path">
+                {youthPath.map((step, i) => (
+                  <div className="flow__item" key={step}>
+                    {i > 0 ? (
+                      <span className="flow__arrow" aria-hidden="true">
+                        →
+                      </span>
+                    ) : null}
+                    <span>{step}</span>
+                  </div>
                 ))}
               </div>
+              <p className="prose prose--note">
+                Participants could learn artistic technique, project planning,
+                pricing, client communication, portfolio development and
+                professional mural production.
+              </p>
             </Reveal>
           </div>
         </section>
 
-        {/* 15 Reclaim the Walls */}
+        {/* 02 Reclaim the walls */}
         <section
           id="reclaim"
           className="section"
@@ -309,18 +197,12 @@ export default function App() {
               </h2>
               <p className="secondary-line accent">LA84 → LA28</p>
               <p className="prose">
-                Los Angeles once turned its infrastructure into monumental public
-                art.
-              </p>
-              <p className="prose">
                 The 1984 Olympic era helped establish an iconic chapter in Los
                 Angeles mural history.
               </p>
               <p className="prose">
-                Decades later, many of those works are no longer visible.
-              </p>
-              <p className="prose">
-                Some of these walls now sit in a recurring cycle:
+                Decades later, many of those works are no longer visible, and
+                some of these surfaces now sit in a recurring cycle:
               </p>
               <p className="secondary-line">
                 GRAFFITI.
@@ -331,31 +213,35 @@ export default function App() {
                 <br />
                 PAINT OVER AGAIN.
               </p>
-              <h3 className="display display--xl" style={{ marginTop: "3rem" }}>
+              <h3 className="display display--xl" style={{ marginTop: "2.75rem" }}>
                 LET&apos;S TURN THEM
                 <br />
                 INTO CANVASES AGAIN.
               </h3>
+              <p className="prose">
+                Identify high-visibility walls and infrastructure where Los
+                Angeles can commission a new generation of monumental urban
+                artwork.
+              </p>
+              <p className="prose">
+                Not recreations of what existed before.
+              </p>
+              <p className="prose">
+                New work reflecting Los Angeles today — created by artists who
+                live here.
+              </p>
+              <h3 className="display display--lg" style={{ marginTop: "2.5rem" }}>
+                ARTWORK BORN HERE.
+                <br />
+                TALENT SOURCED HERE.
+              </h3>
             </Reveal>
-          </div>
-        </section>
 
-        {/* 16 Existing walls */}
-        <section className="section section--tight" aria-labelledby="walls-title">
-          <div className="shell">
-            <h2 id="walls-title" className="visually-hidden">
-              Existing walls
-            </h2>
-            <Reveal className="walls">
+            <Reveal className="walls walls--duo" delay={1}>
               <SiteImage
                 src={images.wall01.src}
                 alt={images.wall01.alt}
                 className="figure--portrait"
-              />
-              <SiteImage
-                src={images.wall02.src}
-                alt={images.wall02.alt}
-                className="figure--wide"
               />
               <SiteImage
                 src={images.wall03.src}
@@ -363,76 +249,14 @@ export default function App() {
                 className="figure--wide"
               />
             </Reveal>
-            <Reveal delay={1}>
-              <p className="walls-caption">
-                THE OPPORTUNITY
-                <br />
-                IS ALREADY HERE.
-              </p>
-            </Reveal>
           </div>
         </section>
 
-        {/* 17 New generation */}
-        <section className="section" aria-labelledby="generation-title">
-          <div className="shell">
-            <Reveal>
-              <h2 id="generation-title" className="display display--xl">
-                A NEW GENERATION
-                <br />
-                OF LOS ANGELES
-                <br />
-                STREET ART.
-              </h2>
-              <p className="prose">
-                I propose identifying high-visibility walls and infrastructure
-                where Los Angeles can commission a new generation of monumental
-                urban artwork.
-              </p>
-              <p className="prose">
-                Not recreations of what existed before. Not generic civic
-                decoration.
-              </p>
-              <p className="prose">
-                <strong>
-                  Los Angeles street art created by Los Angeles artists.
-                </strong>
-              </p>
-              <div className="themes">
-                {cityThemes.map((line) => (
-                  <p key={line}>{line}</p>
-                ))}
-              </div>
-              <h3 className="display display--lg" style={{ marginTop: "3rem" }}>
-                ARTWORK
-                <br />
-                BORN HERE.
-              </h3>
-              <h3 className="display display--lg" style={{ marginTop: "2rem" }}>
-                SOURCE THE
-                <br />
-                TALENT HERE.
-              </h3>
-              <p className="prose">
-                Los Angeles already has the artists.
-              </p>
-              <p className="prose">
-                Muralists. Graffiti artists. Illustrators. Designers. Painters.
-                Photographers. Lettering artists. Emerging creatives who simply
-                haven&apos;t received their first major commission yet.
-              </p>
-              <p className="prose">
-                Let&apos;s find them. Let&apos;s commission them. Let&apos;s pair
-                experienced artists with apprentices coming through the youth
-                program. And let&apos;s pay local creative talent to transform
-                Los Angeles.
-              </p>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* 18 Connect the programs */}
-        <section className="section" aria-labelledby="classroom-title">
+        {/* Connect — wall becomes classroom */}
+        <section
+          className="section section--ink"
+          aria-labelledby="classroom-title"
+        >
           <div className="shell">
             <Reveal>
               <h2 id="classroom-title" className="display display--xl">
@@ -440,6 +264,18 @@ export default function App() {
                 <br />
                 THE CLASSROOM.
               </h2>
+              <p className="prose">
+                This is where the two ideas become one.
+              </p>
+              <p className="prose">
+                Young artists develop their skills through mentorship.
+                Established Los Angeles artists receive meaningful commissions.
+                Emerging artists work alongside them.
+              </p>
+              <p className="prose">
+                Public walls become real-world opportunities to learn, create,
+                build portfolios and eventually earn commissions of their own.
+              </p>
               <div className="path" aria-label="Artist pathway">
                 {classroomPath.map((step, index) => (
                   <div className="path__item" key={step}>
@@ -448,70 +284,14 @@ export default function App() {
                   </div>
                 ))}
               </div>
-              <p className="prose">
-                This is where the two ideas become one.
-              </p>
-              <p className="prose">
-                A young person could enter the program learning basic mural
-                techniques. Work alongside a professional artist. Participate in
-                a neighborhood project. Build a portfolio. Become a paid
-                assistant. Develop their own artistic voice. And eventually earn
-                the opportunity to design a wall themselves.
-              </p>
             </Reveal>
           </div>
         </section>
 
-        {/* 19 Respect the culture */}
-        <section className="section" aria-labelledby="respect-title">
-          <div className="shell">
-            <Reveal>
-              <h2 id="respect-title" className="display display--xl">
-                RESPECT
-                <br />
-                THE CULTURE.
-              </h2>
-              <p className="prose">
-                The goal isn&apos;t to pretend commissioned murals will eliminate
-                graffiti.
-              </p>
-              <p className="prose">
-                The goal is to create artwork that communities recognize as
-                authentic, give artists ownership in the spaces around them, and
-                replace repeatedly painted-over surfaces with something
-                culturally valuable.
-              </p>
-              <p className="prose">
-                When local artists help create the environment, there is an
-                opportunity to build a different relationship between the wall
-                and the community around it.
-              </p>
-              <div className="ask">
-                <div>
-                  <h3>Instead of asking:</h3>
-                  <p>
-                    HOW QUICKLY CAN WE
-                    <br />
-                    PAINT OVER THIS WALL?
-                  </p>
-                </div>
-                <div>
-                  <h3>Let&apos;s also ask:</h3>
-                  <p>
-                    WHAT COULD THIS
-                    <br />
-                    WALL BECOME?
-                  </p>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* 20 LA84 → LA28 */}
+        {/* LA84 → LA28 */}
         <section
           id="la84-la28"
-          className="section section--ink"
+          className="section section--ink section--tight-top"
           aria-labelledby="olympics-title"
         >
           <div className="shell">
@@ -532,15 +312,8 @@ export default function App() {
               </p>
               <p className="prose">
                 That creates an opportunity to begin another chapter in the
-                city&apos;s public-art history.
-              </p>
-              <p className="prose">
-                Imagine visitors traveling through Los Angeles and encountering
-                monumental artwork created by artists from the communities
-                surrounding them.
-              </p>
-              <p className="prose">
-                Not artwork imported into Los Angeles.
+                city&apos;s public-art history — one created by Los Angeles
+                artists and the communities surrounding these walls.
               </p>
               <h3 className="display display--lg" style={{ marginTop: "2.5rem" }}>
                 ARTWORK
@@ -565,71 +338,55 @@ export default function App() {
           </div>
         </section>
 
-        {/* 21 Manifesto */}
-        <section className="section" aria-labelledby="manifesto-title">
+        {/* Pilot */}
+        <section id="pilot" className="section" aria-labelledby="pilot-title">
           <div className="shell">
             <Reveal>
-              <h2 id="manifesto-title" className="display display--xl">
-                GIVE LOS ANGELES
-                <br />
-                THE WALLS.
-              </h2>
-              <ul className="manifesto-list">
-                <li>Give young artists somewhere to develop.</li>
-                <li>Give established artists meaningful commissions.</li>
-                <li>Give neighborhoods artwork they can identify with.</li>
-                <li>Give emerging talent a way into the creative economy.</li>
-                <li>
-                  Give visitors something uniquely Los Angeles to experience.
-                </li>
-                <li>
-                  And turn walls that currently represent an ongoing maintenance
-                  problem into opportunities for culture, mentorship and civic
-                  pride.
-                </li>
-              </ul>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* 22 Pilot */}
-        <section className="section" aria-labelledby="pilot-title">
-          <div className="shell">
-            <Reveal>
+              <p className="eyebrow">The Next Step</p>
               <h2 id="pilot-title" className="display display--xl">
                 START WITH
                 <br />
                 ONE WALL.
               </h2>
               <p className="prose">
-                This doesn&apos;t need to begin as a massive citywide program.
+                The idea does not need to begin citywide.
               </p>
-              <p className="prose">Start with a pilot.</p>
-              <ol className="pilot">
-                {pilotSteps.map((step) => (
-                  <li key={step.n}>
-                    <span>{step.n}</span>
-                    {step.text}
-                  </li>
+              <p className="prose">
+                Start with one location. Create one pilot that brings together
+                an established Los Angeles artist, emerging talent and young
+                apprentices.
+              </p>
+
+              <div className="flow flow--pilot" aria-label="Pilot sequence">
+                {pilotFlow.map((step, i) => (
+                  <div className="flow__item" key={step}>
+                    {i > 0 ? (
+                      <span className="flow__arrow" aria-hidden="true">
+                        →
+                      </span>
+                    ) : null}
+                    <span>{step}</span>
+                  </div>
                 ))}
-              </ol>
+              </div>
+
               <h3 className="display display--lg" style={{ marginTop: "3rem" }}>
-                PROVE THE IDEA.
+                PROVE THE MODEL.
                 <br />
-                THEN SCALE IT.
+                THEN BUILD FROM IT.
               </h3>
             </Reveal>
           </div>
         </section>
 
-        {/* 23 Recent work */}
+        {/* Selected work */}
         <section id="work" className="section" aria-labelledby="work-title">
           <div className="shell">
             <Reveal>
               <h2 id="work-title" className="display display--xl">
-                RECENT WORK.
+                SELECTED WORK.
               </h2>
-              <div className="work-grid">
+              <div className="work-grid work-grid--select">
                 {images.work.map((item, index) => (
                   <SiteImage
                     key={item.src}
@@ -637,7 +394,7 @@ export default function App() {
                     alt={item.alt}
                     caption={item.caption}
                     className={
-                      index % 3 === 1 ? "figure--portrait" : "figure--wide"
+                      index % 2 === 1 ? "figure--portrait" : "figure--wide"
                     }
                   />
                 ))}
@@ -646,7 +403,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* 24 Contact */}
+        {/* Contact */}
         <section
           id="contact"
           className="section section--ink"
@@ -657,32 +414,26 @@ export default function App() {
               <h2 id="contact-title" className="display display--xl">
                 LET&apos;S BUILD
                 <br />
-                SOMETHING
+                SOMETHING FOR
                 <br />
-                FOR LOS ANGELES.
+                LOS ANGELES.
               </h2>
-              <p className="prose">
-                I would welcome the opportunity to help develop these ideas
-                alongside the City of Los Angeles, local artists, community
-                organizations, schools, businesses and private partners.
-              </p>
-              <p className="prose">My goal is simple:</p>
-              <p className="prose">
-                <strong>
-                  Take artistic talent that already exists in Los Angeles and
-                  create more opportunities for that talent to improve the city
-                  that created it.
-                </strong>
-              </p>
-              <div className="contact-block">
+              <div className="contact-block contact-block--simple">
                 <div className="contact-meta">
                   <p className="name">{site.name}</p>
-                  <p className="role">{site.title}</p>
-                  <p>
-                    <a href={site.phoneHref}>{site.phone}</a>
+                  {site.titleLines.map((line) => (
+                    <p className="role" key={line}>
+                      {line}
+                    </p>
+                  ))}
+                  <p className="role" style={{ marginTop: "1.25rem" }}>
+                    {site.location}
+                  </p>
+                  <p style={{ marginTop: "1.5rem" }}>
+                    <a href={site.emailHref}>{site.email}</a>
                   </p>
                   <p>
-                    <a href={site.emailHref}>{site.email}</a>
+                    <a href={site.phoneHref}>{site.phone}</a>
                   </p>
                   <p>
                     <a
@@ -695,7 +446,7 @@ export default function App() {
                   </p>
                 </div>
                 <a className="cta-link" href={site.emailHref}>
-                  Let&apos;s talk →
+                  Start a conversation →
                 </a>
               </div>
             </Reveal>
@@ -707,7 +458,9 @@ export default function App() {
         <div>
           <div>{site.name}</div>
           <div>{site.location}</div>
-          <div>© {site.year} {site.name}</div>
+          <div>
+            © {site.year} {site.name}
+          </div>
         </div>
         <a href="#top">Back to top ↑</a>
       </footer>

@@ -2,27 +2,32 @@
 
 Place photography in this folder. Missing files render elegant placeholders — the site will not break.
 
-## Required files
+## Required for the concise site
 
-| Filename | Suggested use |
+| Filename | Use |
 | --- | --- |
-| `dodgers-mural-hero.jpg` | Hero proof mural (Venice Beach Dodgers) |
-| `youth-art-01.jpg` | Youth / craft section |
-| `youth-art-02.jpg` | Youth / craft section |
-| `wall-01.jpg` | Existing wall conditions |
-| `wall-02.jpg` | Existing wall conditions |
-| `wall-03.jpg` | Existing wall conditions |
-| `work-01.jpg` | Recent work gallery |
-| `work-02.jpg` | Recent work gallery |
-| `work-03.jpg` | Recent work gallery |
-| `work-04.jpg` | Recent work gallery |
-| `work-05.jpg` | Recent work gallery |
-| `work-06.jpg` | Recent work gallery |
-| `og-image.jpg` | Social / Open Graph share image (1200×630 recommended) |
+| `dodgers-mural-hero.jpg` | Venice Beach Dodgers mural (hero proof) |
+| `wall-01.jpg` | Existing wall condition |
+| `wall-03.jpg` | Existing wall condition |
+| `work-01.jpg` | Selected work |
+| `work-02.jpg` | Selected work |
+| `work-03.jpg` | Selected work |
+| `work-04.jpg` | Selected work |
+| `og-image.jpg` | Social / Open Graph (1200×630 recommended) |
+
+## Optional / archived (not shown on concise site)
+
+| Filename | Notes |
+| --- | --- |
+| `youth-art-01.jpg` | Reserved for Phase 2 / expanded proposal |
+| `youth-art-02.jpg` | Reserved for Phase 2 / expanded proposal |
+| `wall-02.jpg` | Reserved for Phase 2 |
+| `work-05.jpg` | Extra portfolio |
+| `work-06.jpg` | Extra portfolio |
 
 ## Guidelines
 
-- Prefer high-resolution JPEGs, compressed for web (~150–400 KB where possible).
+- Prefer high-resolution JPEGs, compressed for web.
 - Do not use stock photography.
-- Keep original aspect ratios; the site uses `object-fit: cover` for editorial crops.
 - Update alt text and captions in `src/data/siteContent.ts`.
+- Full narrative archive: `content/full-proposal.md`.
