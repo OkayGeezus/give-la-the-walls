@@ -8,6 +8,17 @@ import work01 from "../assets/images/work-01.jpg";
 import work02 from "../assets/images/work-02.jpg";
 import work03 from "../assets/images/work-03.jpg";
 import work04 from "../assets/images/work-04.jpg";
+import work05 from "../assets/images/work-05.jpg";
+import work06 from "../assets/images/work-06.jpg";
+import work07 from "../assets/images/work-07.jpg";
+import work08 from "../assets/images/work-08.jpg";
+import work09 from "../assets/images/work-09.jpg";
+import work10 from "../assets/images/work-10.jpg";
+import work11 from "../assets/images/work-11.jpg";
+import work12 from "../assets/images/work-12.jpg";
+import work13 from "../assets/images/work-13.jpg";
+import work14 from "../assets/images/work-14.jpg";
+import work15 from "../assets/images/work-15.jpg";
 
 export const site = {
   name: "Guillermo Palacio",
@@ -63,27 +74,93 @@ export const images = {
   work: [
     {
       src: work01,
+      alt: "Aerial view of Crenshaw Cougars painted basketball court with geometric color field",
+      caption: "School court",
+      objectPosition: "center center",
+    },
+    {
+      src: work02,
+      alt: "Overhead mural of Paralympic Experience basketball court with wheelchair athlete character",
+      caption: "Court mural",
+      objectPosition: "center 40%",
+    },
+    {
+      src: work03,
+      alt: "Aerial view of turquoise Nike-branded outdoor court among palm trees",
+      caption: "Brand activation",
+      objectPosition: "center 45%",
+    },
+    {
+      src: work04,
       alt: "Indoor landscape mural of fruit orchards, palm trees, and a house in the mountains",
       caption: "Mural",
       objectPosition: "center 45%",
     },
     {
-      src: work02,
+      src: work05,
+      alt: "Speed Racer mural with wildstyle lettering on a corrugated metal wall in Pico Union",
+      caption: "Street mural",
+      objectPosition: "center 40%",
+    },
+    {
+      src: work06,
+      alt: "Teenage Mutant Ninja Turtles mural with Donatello and graffiti lettering in Long Beach",
+      caption: "Collab mural",
+      objectPosition: "center 35%",
+    },
+    {
+      src: work07,
+      alt: "Street Fighter Ryu mural casting a hadoken on a cinderblock wall",
+      caption: "Character mural",
+      objectPosition: "center 40%",
+    },
+    {
+      src: work08,
+      alt: "Street Fighter Akuma mural with magenta energy effects on a concrete wall",
+      caption: "Character mural",
+      objectPosition: "center 42%",
+    },
+    {
+      src: work09,
+      alt: "Blue and black wildstyle graffiti lettering on a cinderblock wall",
+      caption: "Lettering",
+      objectPosition: "center 45%",
+    },
+    {
+      src: work10,
       alt: "Colorful graffiti mural on a corrugated metal fence under a cloudy Los Angeles sky",
       caption: "Street art",
       objectPosition: "center 55%",
     },
     {
-      src: work03,
+      src: work11,
+      alt: "Close-up of a Lakers portrait mural painted on a gold vehicle",
+      caption: "Portrait",
+      objectPosition: "center 28%",
+    },
+    {
+      src: work12,
       alt: "Artists spray-painting a Lakers portrait mural on a yellow truck",
       caption: "On site",
       objectPosition: "center 35%",
     },
     {
-      src: work04,
+      src: work13,
       alt: "Illustration of a bird beside yellow and orange flowers",
       caption: "Illustration",
       objectPosition: "center top",
+    },
+    {
+      src: work14,
+      alt: "Los Angeles World Cup 2026 poster illustration with trophy and city skyline",
+      caption: "Campaign art",
+      objectPosition: "center 30%",
+    },
+    {
+      src: work15,
+      alt: "Interior corner mural with tiki mask, tropical florals, and blue lettering",
+      caption: "Interior mural",
+      objectPosition: "center 40%",
     },
   ] satisfies SiteImage[],
   og: {
