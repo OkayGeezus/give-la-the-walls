@@ -1057,15 +1057,25 @@ button {
   border-color: var(--ink);
 }
 
-@media (min-width: 720px) {
-  .work-carousel__slide .figure__media {
-    aspect-ratio: 7 / 5;
-  }
-}
-
+/* Mobile: keep square crops */
 @media (max-width: 719px) {
   .work-carousel__slide .figure__media {
     aspect-ratio: 1;
+    height: auto;
+    max-height: none;
+  }
+}
+
+/*
+ * Desktop: viewport-aware height so slides stay fully on-screen on short
+ * laptops, while still reading as a horizontal editorial frame on large monitors.
+ */
+@media (min-width: 720px) {
+  .work-carousel__slide .figure__media {
+    aspect-ratio: unset;
+    width: 100%;
+    height: clamp(260px, 36vw, 480px);
+    max-height: min(52vh, 520px);
   }
 }
 
