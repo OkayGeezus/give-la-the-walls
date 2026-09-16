@@ -77,7 +77,7 @@ export const images = {
       src: work04,
       alt: "Illustration of a bird beside yellow and orange flowers",
       caption: "Illustration",
-      objectPosition: "center center",
+      objectPosition: "center top",
     },
   ] satisfies SiteImage[],
   og: {
