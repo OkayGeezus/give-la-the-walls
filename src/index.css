@@ -426,9 +426,9 @@ button {
   }
 
   .work-grid .figure .figure__media {
-    aspect-ratio: auto;
-    height: clamp(220px, 50vw, 300px);
-    max-height: 40vh;
+    aspect-ratio: 1;
+    height: auto;
+    max-height: none;
   }
 }
 

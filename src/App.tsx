@@ -394,7 +394,7 @@ export default function App() {
                     alt={item.alt}
                     caption={item.caption}
                     objectPosition={item.objectPosition}
-                    className="figure--wide"
+                    className="figure--square"
                   />
                 ))}
               </div>
