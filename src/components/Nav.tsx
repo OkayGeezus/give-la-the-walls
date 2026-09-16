@@ -26,7 +26,7 @@ export function Nav() {
   return (
     <nav className={`nav ${scrolled ? "is-scrolled" : ""}`} aria-label="Primary">
       <a className="nav__brand" href="#top" onClick={close}>
-        {site.name}
+        {site.brand}
       </a>
 
       <ul className="nav__links">

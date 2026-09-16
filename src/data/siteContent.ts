@@ -11,6 +11,7 @@ import work04 from "../assets/images/work-04.jpg";
 
 export const site = {
   name: "Guillermo Palacio",
+  brand: "GIVE LA THE WALLS",
   titleLines: ["Artist", "Designer", "Creative Director"] as const,
   location: "Los Angeles, California",
   phone: "(310) 628-6787",
