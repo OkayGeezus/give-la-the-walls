@@ -26,6 +26,7 @@ export type SiteImage = {
   src: string;
   alt: string;
   caption?: string;
+  objectPosition?: string;
 };
 
 export const images = {
@@ -33,20 +34,24 @@ export const images = {
     src: dodgersMuralHero,
     alt: "Venice Beach mural celebrating the Los Angeles Dodgers World Series championship, featuring Shohei Ohtani",
     caption: "Venice Beach · Dodgers mural",
+    objectPosition: "center 42%",
   },
   /** After “ARTWORK BORN HERE. TALENT SOURCED HERE.” — single column */
   bornHereGallery: [
     {
       src: bornHere01,
       alt: "Crew on a lift painting over a mural under a Los Angeles freeway overpass",
+      objectPosition: "center 40%",
     },
     {
       src: bornHere02,
       alt: "Frank Romero freeway mural with cars, hearts, and palm trees near Hollywood 101",
+      objectPosition: "center 45%",
     },
     {
       src: bornHere03,
       alt: "Los Angeles freeway mural of Jupiter and classical columns beside Harbor Freeway traffic",
+      objectPosition: "center 40%",
     },
   ],
   work: [
@@ -54,21 +59,25 @@ export const images = {
       src: work01,
       alt: "Indoor landscape mural of fruit orchards, palm trees, and a house in the mountains",
       caption: "Mural",
+      objectPosition: "center 45%",
     },
     {
       src: work02,
       alt: "Colorful graffiti mural on a corrugated metal fence under a cloudy Los Angeles sky",
       caption: "Street art",
+      objectPosition: "center 55%",
     },
     {
       src: work03,
       alt: "Artists spray-painting a Lakers portrait mural on a yellow truck",
       caption: "On site",
+      objectPosition: "center 35%",
     },
     {
       src: work04,
       alt: "Illustration of a bird beside yellow and orange flowers",
       caption: "Illustration",
+      objectPosition: "center center",
     },
   ] satisfies SiteImage[],
   og: {

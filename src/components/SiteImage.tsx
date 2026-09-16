@@ -6,6 +6,8 @@ type SiteImageProps = {
   caption?: string;
   className?: string;
   priority?: boolean;
+  /** CSS object-position for cover crops */
+  objectPosition?: string;
 };
 
 export function SiteImage({
@@ -14,6 +16,7 @@ export function SiteImage({
   caption,
   className = "figure--wide",
   priority = false,
+  objectPosition,
 }: SiteImageProps) {
   const [failed, setFailed] = useState(false);
   const filename = src.split("/").pop()?.split("?")[0] ?? src;
@@ -24,24 +27,27 @@ export function SiteImage({
 
   return (
     <figure className={`figure ${className}`.trim()}>
-      {!failed ? (
-        <img
-          key={src}
-          src={src}
-          alt={alt}
-          loading={priority ? "eager" : "lazy"}
-          decoding="async"
-          onError={() => setFailed(true)}
-        />
-      ) : (
-        <div
-          className="figure__placeholder"
-          aria-label={`Missing image: ${filename}`}
-        >
-          <span>ADD IMAGE</span>
-          <code>{filename}</code>
-        </div>
-      )}
+      <div className="figure__media">
+        {!failed ? (
+          <img
+            key={src}
+            src={src}
+            alt={alt}
+            loading={priority ? "eager" : "lazy"}
+            decoding="async"
+            style={objectPosition ? { objectPosition } : undefined}
+            onError={() => setFailed(true)}
+          />
+        ) : (
+          <div
+            className="figure__placeholder"
+            aria-label={`Missing image: ${filename}`}
+          >
+            <span>ADD IMAGE</span>
+            <code>{filename}</code>
+          </div>
+        )}
+      </div>
       {caption ? (
         <figcaption className="figure__caption">{caption}</figcaption>
       ) : null}

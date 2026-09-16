@@ -50,6 +50,7 @@ export default function App() {
                 src={images.dodgersMural.src}
                 alt={images.dodgersMural.alt}
                 caption={images.dodgersMural.caption}
+                objectPosition={images.dodgersMural.objectPosition}
                 className="figure--hero"
                 priority
               />
@@ -243,6 +244,7 @@ export default function App() {
                   key={`born-here-${index}`}
                   src={item.src}
                   alt={item.alt}
+                  objectPosition={item.objectPosition}
                   className="figure--wide"
                 />
               ))}
@@ -391,6 +393,7 @@ export default function App() {
                     src={item.src}
                     alt={item.alt}
                     caption={item.caption}
+                    objectPosition={item.objectPosition}
                     className="figure--wide"
                   />
                 ))}
