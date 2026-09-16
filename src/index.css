@@ -1057,7 +1057,13 @@ button {
   border-color: var(--ink);
 }
 
-@media (max-width: 600px) {
+@media (min-width: 720px) {
+  .work-carousel__slide .figure__media {
+    aspect-ratio: 7 / 5;
+  }
+}
+
+@media (max-width: 719px) {
   .work-carousel__slide .figure__media {
     aspect-ratio: 1;
   }
