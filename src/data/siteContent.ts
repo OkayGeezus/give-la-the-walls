@@ -41,7 +41,7 @@ export const images = {
     {
       src: bornHere01,
       alt: "Crew on a lift painting over a mural under a Los Angeles freeway overpass",
-      objectPosition: "center 40%",
+      objectPosition: "center 35%",
     },
     {
       src: bornHere02,

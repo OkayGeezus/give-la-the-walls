@@ -696,14 +696,15 @@ button {
 
 @media (min-width: 800px) {
   .walls.walls--born-here {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: stretch;
   }
 
+  /* Identical heights despite mixed source aspect ratios */
   .walls.walls--born-here .figure .figure__media {
-    aspect-ratio: 4 / 3;
-    height: auto;
-    max-height: min(42vh, 460px);
+    aspect-ratio: auto;
+    height: clamp(340px, 28vw, 420px);
+    max-height: none;
   }
 }
 
@@ -971,8 +972,8 @@ button {
 }
 
 .work-grid .figure .figure__media {
-  aspect-ratio: 4 / 3;
-  max-height: min(48vh, 520px);
+  aspect-ratio: 1;
+  max-height: min(70vw, 560px);
 }
 
 @media (min-width: 720px) {
@@ -982,8 +983,8 @@ button {
   }
 
   .work-grid .figure .figure__media {
-    aspect-ratio: 4 / 3;
-    max-height: min(42vh, 480px);
+    aspect-ratio: 1;
+    max-height: min(42vw, 520px);
   }
 }
 
